@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>user</title>
+        <link rel="stylesheet" href="/css/marks.css">
+    </head>
+    <body>
+        <table>
+            <tr>
+                <th>S.No</th>
+                <th>ID</th>
+                <th>ProductName</th>
+                <th>Brand</th>
+                <th>Price</th>
+            </tr>
+            <% if(userdata.length !=0){%>
+                <%var i=1;%>
+                <%userdata.forEach(function(data){%>
+            <tr>
+                <td><%=i;%></td>
+                <td><%=data.id %></td>
+                <td><%=data.prodname %></td>
+                <td><%=data.brand %></td>
+                <td><%=data.price %></td>
+            </tr>
+            <%i++;})%>
+            <%}else{%>
+                <tr>
+                    <td colspan="8">No Data Found</td>
+                </tr>
+                <%}%>
+        </table>
+    </body>
+</html>
